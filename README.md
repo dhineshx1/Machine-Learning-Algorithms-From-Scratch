@@ -20,6 +20,7 @@ The goal is **learning and understanding the inner workings** of these algorithm
 ### 🔹 Supervised Learning
 
 * K-Nearest Neighbors (KNN)
+* Linear Regression 
 
 ** To be added soon **
 
