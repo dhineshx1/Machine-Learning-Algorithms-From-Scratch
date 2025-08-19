@@ -15,8 +15,13 @@ class _BaseKnn:
 
     
     def k_neighbours(self,X):
+        # Compute distance using euclidean distance method
         distance = [np.linalg.norm(X-q) for q in self.X_train]
+
+        # sort the distance to get nearest K vector distances
         n_neighbours_ind = np.argsort(distance)[:self.k]
+
+        # fetching k neighbour lables by it indices
         k_neighbours_label = [self.y_train[i] for i in n_neighbours_ind]
 
         return k_neighbours_label
@@ -35,6 +40,8 @@ class KNNClassifier:
 
     def _predict(self,X):
         n_neighbours = self.knn.k_neighbours(X)
+
+        # return the most voted class
         return Counter(n_neighbours).most_common(1)[0][0]
     
 class KNNRegressor:
@@ -51,6 +58,8 @@ class KNNRegressor:
 
     def _predict(self,X):
         n_neighbours = self.knn.k_neighbours(X)
+
+        # return the mean of K neighbour's y value
         return np.mean(n_neighbours)
 
 
