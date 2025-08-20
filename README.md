@@ -21,6 +21,7 @@ The goal is **learning and understanding the inner workings** of these algorithm
 
 * K-Nearest Neighbors (KNN)
 * Linear Regression 
+* Logistic Regression 
 
 ** To be added soon **
 
